@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>nPUB to HEX | nstr.cloud</title>
+        <meta charset="utf-8"/>
+        <meta author="NSTR.cloud"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="../assets/css/main.css"/>
+        <script src="../assets/js/particles.min.js"></script>
+    </head>
+    <script>particlesJS.load('particles-js', 'assets/js/particles.json', function() {});</script>
+    <body class="is-preload">
+        <div id="particles-js"></div>
+        <div id="wrapper">
+        <section id="main">
+            <div class="container">
+                <h1><a href="https://nstr.cloud/">KEY CONVERTER</a></h1>
+                <label for="bech32">nPUB key</label><br>
+                <input type="text" class="u-full-width" placeholder="nPUB/nSEC..." id="pub-key">
+                <br><br>
+                <label for="bech32">HEX key</label><br>
+                <input type="text" class="u-full-width" placeholder="" id="hex-key" readonly>
+            </div>
+        </section>
+    </div>
+    <script>
+		if('addEventListener' in window){
+			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+	</script>
+    <script src="bech32.js" ></script>
+    <script src="key.js" ></script>
+    </body>
+</html>
